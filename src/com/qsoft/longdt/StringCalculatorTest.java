@@ -15,4 +15,9 @@ public class StringCalculatorTest {
 	public void shouldReturnNumberOnNumberInput() {
 		assertEquals(1, StringCalculator.add("1"));
 	}
+	
+	@Test
+	public void shouldReturnWithCommaDelim() {
+		assertEquals(3, StringCalculator.add("1,2"));
+	}
 }
