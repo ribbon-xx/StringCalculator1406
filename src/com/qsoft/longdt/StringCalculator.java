@@ -27,6 +27,10 @@ public class StringCalculator {
 		Matcher m = p.matcher(input);
 		while (m.find()) {
 			int number = toInt(m.group());
+			if (number < 0) {
+				throw new NumberFormatException("negatives not allowed "
+						+ number);
+			}
 			ints.add(number);
 		}
 
